@@ -1,0 +1,8 @@
+# name K value kind (run lengths; kind: cert or num)
+lower_prev 1400 476 cert
+lower_C1 1400 589 cert
+upper_C3 1400 533 cert
+upper_C3 2000 533 cert
+upper_C2 2000 593 cert
+search_robust 1400 477 num
+search_robust 2000 489 num

@@ -1,0 +1,118 @@
+{
+ "C1": {
+  "T_K_in_certified_range": true,
+  "argmin_j_cert": 246,
+  "argmin_j_float": 246,
+  "certified": 5.47216801e-05,
+  "diff_safe_side": 8.09919111e-09,
+  "float": 5.47297792e-05,
+  "name": "C1 min margin",
+  "ok": true,
+  "radius": 2.2964324e-08,
+  "safe_side": true,
+  "second_smallest_margin": 5.48788589e-05,
+  "theta_up": {
+   "certified": 0.000534062047473324,
+   "float": 0.000534062047473324
+  }
+ },
+ "C2": {
+  "all_rho_within_radius": true,
+  "certified_arcs_cover_circle": true,
+  "certified_arcs_inside_float_arcs_within_radius": true,
+  "float_arcs_cover_circle": true,
+  "float_arcs_shrunk_by_radius_cover_circle": true,
+  "float_max_rho_below_one": true,
+  "max_abs_rho_diff": 2.5700017e-06,
+  "max_arc_end_diff": 2.60070599e-05,
+  "max_rho": {
+   "certified": 0.995073671,
+   "diff_safe_side": 2.34306281e-06,
+   "float": 0.995071328,
+   "name": "C2 max rho",
+   "ok": true,
+   "radius": 3.5496771e-06
+  },
+  "max_rho_argmax_vector": 32,
+  "max_rho_radius": 3.63079898e-06,
+  "min_rho_cert_minus_float": 1.11795439e-06,
+  "ok": true,
+  "safe_side": true,
+  "vectors": 48,
+  "vectors_outside_radius": 0
+ },
+ "C3_K1400": {
+  "K": 1400,
+  "closed_form_R": {
+   "certified": 0.940928131,
+   "diff_safe_side": 1.57624245e-06,
+   "float": 0.940926555,
+   "name": "C3 closed form R_rob K=1400",
+   "ok": true,
+   "radius": 2.08348466e-06
+  },
+  "cover_sup_R": {
+   "cell_overshoot_limit": 0.05,
+   "cells": 1024,
+   "cells_float_above_certified": 0,
+   "cert_R_upper_max_equals_stored": true,
+   "certified_R_upper_max": 0.906239387,
+   "float_sup_R": 0.906206947,
+   "float_sup_below_one": true,
+   "max_cert_minus_float_per_cell": 0.000126082998,
+   "min_cert_minus_float_per_cell": 3.16647806e-05,
+   "ok": true
+  },
+  "ok": true,
+  "safe_side": true
+ },
+ "C3_K2000": {
+  "K": 2000,
+  "closed_form_R": {
+   "certified": 0.991767176,
+   "diff_safe_side": 1.58316546e-06,
+   "float": 0.991765593,
+   "name": "C3 closed form R_rob K=2000",
+   "ok": true,
+   "radius": 2.09095049e-06
+  },
+  "cover_sup_R": {
+   "cell_overshoot_limit": 0.05,
+   "cells": 1024,
+   "cells_float_above_certified": 0,
+   "cert_R_upper_max_equals_stored": true,
+   "certified_R_upper_max": 0.957055552,
+   "float_sup_R": 0.957023066,
+   "float_sup_below_one": true,
+   "max_cert_minus_float_per_cell": 0.000126005691,
+   "min_cert_minus_float_per_cell": 3.16950755e-05,
+   "ok": true
+  },
+  "ok": true,
+  "safe_side": true
+ },
+ "C4": {
+  "Kprime_upper": {
+   "certified": 298204.3825218742,
+   "float": 298204.3825218742
+  },
+  "T_Gamma": {
+   "certified_upper": 1.8093657689139086e-05,
+   "float": 1.8093657689139086e-05
+  },
+  "T_Gamma_cert_not_below_float": true,
+  "argmin_j_cert": 246,
+  "argmin_j_float": 246,
+  "certified": 1.85403095e-05,
+  "diff_safe_side": 8.09919111e-09,
+  "float": 1.85484087e-05,
+  "gamma_5e4_float_margin_is_negative": true,
+  "name": "C4 margin at Gamma=200000",
+  "ok": true,
+  "radius": 2.57425441e-08,
+  "safe_side": true
+ },
+ "all_agree_within_radius": true,
+ "all_on_safe_side": true,
+ "kind": "second implementation (numpy longdouble, mpmath constants), not a proof; no import of certify_*"
+}

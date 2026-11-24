@@ -1,0 +1,35 @@
+{
+  "upload_type": "publication",
+  "publication_type": "article",
+  "title": "The longest sign run of Keiper-Li second differences: a torus problem and its dual",
+  "creators": [
+    {
+      "name": "Perreault, Michaël"
+    }
+  ],
+  "description": "<p>Let c<sub>n</sub> = &lambda;<sub>n+1</sub> &minus; 2&lambda;<sub>n</sub> + &lambda;<sub>n&minus;1</sub> be the second differences of the Li coefficients. Assuming the Riemann hypothesis, every run of one sign of c<sub>n</sub> has length at most 593, improving the bound 621 of a previous paper. The companion torus problem, with free phases in the zero formula, has value between 589 and 593; under an independence hypothesis on the zero angles it equals the longest run of c<sub>n</sub>, and runs of 589 values of each sign occur with positive lower density. A duality theorem shows that a finite certificate exists exactly above the torus value. The constants are certified in ball arithmetic and the code is public.</p>",
+  "keywords": [
+    "Keiper-Li coefficients",
+    "Li's criterion",
+    "Riemann hypothesis",
+    "second differences",
+    "sign runs",
+    "interval arithmetic",
+    "computer-assisted proof"
+  ],
+  "license": "cc-by-4.0",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/mik-tf/keiper-li-run-torus",
+      "relation": "isSupplementedBy",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.24486137",
+      "relation": "continues",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    }
+  ],
+  "version": "1.0"
+}

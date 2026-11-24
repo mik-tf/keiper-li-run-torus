@@ -1,0 +1,9 @@
+== pert_mid0
+FAIL: vector 0: rho upper end 1.3384179734300408 >= 1: refused
+	Maximum resident set size (kbytes): 32568
+== pert_spike
+FAIL: vector 0: rho upper end 1.3008703511925808 >= 1: refused
+	Maximum resident set size (kbytes): 33456
+== pert_rev
+PASS C2 L=594: 48 arcs cover the circle, certified max rho 0.9950736714, chain of 22 arcs, min strict overlap 0.01708946258107346
+	Maximum resident set size (kbytes): 33700

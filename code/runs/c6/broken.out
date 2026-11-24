@@ -1,0 +1,9 @@
+== b_L593
+REFUSED: vector 0 has 594 weights, need L=593
+rc=2
+== b_pert
+FAIL (0, 'rho >= 1') max rho 1.656256
+rc=1
+== b_rm4
+FAIL coverage gap at 2.726938 max rho 0.995073
+rc=1

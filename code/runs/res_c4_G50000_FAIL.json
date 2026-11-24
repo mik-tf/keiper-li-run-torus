@@ -1,0 +1,38 @@
+{
+ "purpose": "proof",
+ "certificate": "C4",
+ "status": "FAIL",
+ "run_utc": "2026-11-24T16:57:23Z",
+ "script_sha256": "99bcb9f01e75e152f4e15311c54e16869361dc42d53bf0f34d9c07642f088513",
+ "nt_bound_sha256": "0fb58a98b3b6a643e30dc3bd948efbc76724bae2eadd8624badde4161a1dc280",
+ "inputs_sha256": {
+  "zeros": "22b58dc39aec60482f13855e893b3674c531ada620cd308046daddc7353e57bb",
+  "inputs_c1": "8fede80764722659dbcdc83d80c01636db369eafbc05d39288ed8fc388590993",
+  "inputs_c4": "63bd5c097faa7143cc92aadbffa2d7afcb37d65d4cfce98bc1cf69980bd1ff79"
+ },
+ "nt_source": "Bellotti-Wong arXiv:2412.15470 v2, Theorem 1.1, second estimate (T >= e)",
+ "claim": "NOT certified",
+ "result": {
+  "K": 1400,
+  "L": 584,
+  "Gamma": 50000,
+  "certified_min_margin": -5.857305379947725e-05,
+  "argmin_j": 245,
+  "min_margin_str": "-5.857305380e-5",
+  "T_Gamma_upper_recomputed": 6.35561566525692e-05,
+  "T_Gamma_used": 6.35561566525692e-05,
+  "T_K_lower": 0.0011388640587600696,
+  "two_T_Gamma": 0.0001271123133051384,
+  "theta_up": 0.000534062047473324,
+  "zeros_Z_rechecked": 1401,
+  "Kprime_upper": 63523.23695846584
+ },
+ "prec_bits": 128,
+ "python_flint_version": "0.9.0",
+ "python_version": "3.12.16 (main, Oct 26 2026, 14:08:45) [Clang 23.1.3 ]",
+ "argv": "certify_tail_c4.py z2000.json inputs_c1.json in_50000.json res_50000.json",
+ "time_zeros_s": 2.182316541671753,
+ "time_sums_s": 2.037822723388672,
+ "time_total_s": 4.244698524475098,
+ "peak_rss_kb_self": 32180
+}

@@ -1,0 +1,7 @@
+{
+ "Gamma": 50000,
+ "scale": "1/1",
+ "Tgamma_used_num": 75033865989026346,
+ "Tgamma_used_den_exp": 70,
+ "note": "scale 1 = the cited bound; scale <> 1 is a broken input (guard must refuse)"
+}

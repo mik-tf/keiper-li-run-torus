@@ -1,0 +1,11 @@
+c1_pass|python3 certify_torus584.py z2000.json inputs_c1.json res_c1.json
+c3_k2000|python3 certify_comb_rob.py z2000.json 534 6 sine 2000 robust res_c3_k2000.json
+c3_k1400|python3 certify_comb_rob.py z2000.json 534 6 sine 1400 robust res_c3_k1400.json
+c1_broken_L585|python3 certify_torus584.py z2000.json broken_c1_L585.json res_b_c1_L585.json
+c1_broken_phase1|python3 certify_torus584.py z2000.json broken_c1_phase1.json res_b_c1_phase1.json
+c1_broken_tailsign|python3 certify_torus584.py z2000.json broken_c1_tailsign.json res_b_c1_tailsign.json
+c1_broken_midpoint|python3 certify_torus584.py broken_z2000_moved.json inputs_c1.json res_b_c1_midpoint.json
+c1_broken_Traised|python3 certify_torus584.py z2000.json broken_c1_Traised.json res_b_c1_Traised.json
+c3_broken_fav|python3 certify_comb_rob.py z2000.json 534 6 sine 2000 favourable res_b_c3_fav.json
+c3_broken_L533|python3 certify_comb_rob.py z2000.json 533 6 sine 2000 robust res_b_c3_L533.json
+c3_broken_Traised|python3 certify_comb_rob.py z2000.json 534 6 sine 2000 robust res_b_c3_Traised.json 1/100

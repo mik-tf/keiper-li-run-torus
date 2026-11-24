@@ -1,0 +1,1 @@
+PASS C2 L=594: 48 arcs cover the circle, certified max rho 0.9950736714, chain of 22 arcs, min strict overlap 0.01708946258107346

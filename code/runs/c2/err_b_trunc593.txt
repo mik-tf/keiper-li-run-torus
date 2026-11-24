@@ -1,0 +1,25 @@
+FAIL: vector 26: rho upper end 1.0005389872297843 >= 1: refused
+Command exited with non-zero status 1
+	Command being timed: "timeout 3000 python3 certify_c2.py z2000.json 593 trunc593.json res_b_trunc593.json --cache ../cache48"
+	User time (seconds): 21.63
+	System time (seconds): 0.26
+	Percent of CPU this job got: 81%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:26.76
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 33956
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 5
+	Minor (reclaiming a frame) page faults: 23671
+	Voluntary context switches: 270
+	Involuntary context switches: 6258
+	Swaps: 0
+	File system inputs: 1864
+	File system outputs: 392
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

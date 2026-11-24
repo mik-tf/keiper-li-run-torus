@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "The longest sign run of Keiper-Li second differences: a torus problem and its dual"
+type: software
+authors:
+  - family-names: Perreault
+    given-names: Michaël
+version: "1.0"
+date-released: "2026-11-24"
+license: CC-BY-4.0
+repository-code: "https://github.com/mik-tf/keiper-li-run-torus"
+keywords:
+  - Keiper-Li coefficients
+  - Li's criterion
+  - Riemann hypothesis
+  - sign runs
+  - interval arithmetic
+  - computer-assisted proof
