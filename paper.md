@@ -602,7 +602,7 @@ Here in Figure {number} we see run length against the number of zeros K, from 10
 
 # Code and data {-}
 
-The certificate scripts, their inputs, the zero list and the certificate records of C1 to C4 and the second check C6 are archived at <https://github.com/mik-tf/keiper-li-run-torus>; the archived DOI is added at release. Appendix B explains how to reproduce each certificate.
+The certificate scripts, their inputs, the zero list and the certificate records of C1 to C4 and the second check C6 are archived at <https://github.com/mik-tf/keiper-li-run-torus> and on Zenodo, <https://doi.org/10.5281/zenodo.24517615> (concept DOI, all versions). Appendix B explains how to reproduce each certificate.
 
 # Use of AI {-}
 
@@ -630,7 +630,7 @@ The bound $T(\Gamma)\le1.810\cdot10^{-5}$ is obtained by partial summation from 
 
 # Appendix B: reproduction {-}
 
-Python $3.12$ with python-flint $0.9.0$ [16] (Arb, $128$-bit balls), and numpy [18] and mpmath [17] for C5. The scripts, inputs and certificate records are archived at <https://github.com/mik-tf/keiper-li-run-torus>; the archived DOI is added at release. Scripts and archives are in `code/`; the commands below are run in that directory. Inputs are exact integers: phases over $2^{40}$, $T_{\mathrm{used}}$ over $2^{60}$, the weights of C2 over $2^{50}$. Each certificate file stores its run record (UTC time, script and input hashes, result). The zero list `z2000.json` is the file of [2]. Timings are wall-clock seconds as measured.
+Python $3.12$ with python-flint $0.9.0$ [16] (Arb, $128$-bit balls), and numpy [18] and mpmath [17] for C5. The scripts, inputs and certificate records are archived at <https://github.com/mik-tf/keiper-li-run-torus> and on Zenodo, <https://doi.org/10.5281/zenodo.24517615>. Scripts and archives are in `code/`; the commands below are run in that directory. Inputs are exact integers: phases over $2^{40}$, $T_{\mathrm{used}}$ over $2^{60}$, the weights of C2 over $2^{50}$. Each certificate file stores its run record (UTC time, script and input hashes, result). The zero list `z2000.json` is the file of [2]. Timings are wall-clock seconds as measured.
 
 - C1 (T3): `python3 certify_torus584.py z2000.json inputs_c1_589.json OUT/cert_c1_torus589.json` (about $45$ s on a loaded machine; peak memory about $31$ MB). Certified minimum margin $5.472\cdot10^{-5}$ at $j=246$. The script name is historical; the window is read from the inputs. The inputs are made from the search output by `make_inputs_c1_L.py`. The earlier window $584$ (`inputs_c1.json`, `cert_c1_torus584.json`, minimum $6.851\cdot10^{-5}$ at $j=245$, $6.7$ s) is kept in the archive.
 - C2 (T4): `python3 certify_c2.py z2000.json 594 vectors_c2.json OUT/cert_c2_L594.json --jobs 4` (about $22$ s on $4$ processes; peak memory about $34$ MB per process). The script requires every vector to have exactly $594$ weights.

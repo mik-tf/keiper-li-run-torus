@@ -36,4 +36,4 @@ The run records of C4 (`code/runs/res_c4_*.json`, `code/cert_c4_*.json`) carry `
 
 ## Cite as
 
-Perreault, M. The longest sign run of Keiper-Li second differences: a torus problem and its dual, version 1.0. https://github.com/mik-tf/keiper-li-run-torus (DOI to be added). See [CITATION.cff](CITATION.cff).
+Perreault, M. The longest sign run of Keiper-Li second differences: a torus problem and its dual, version 1.0.1. https://github.com/mik-tf/keiper-li-run-torus (DOI: [10.5281/zenodo.24517615](https://doi.org/10.5281/zenodo.24517615) (all versions; v1.0 is [10.5281/zenodo.24517616](https://doi.org/10.5281/zenodo.24517616))). See [CITATION.cff](CITATION.cff).
