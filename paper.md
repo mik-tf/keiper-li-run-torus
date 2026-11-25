@@ -606,7 +606,7 @@ The certificate scripts, their inputs, the zero list and the certificate records
 
 # Use of AI {-}
 
-Claude Opus 5.5 and Claude Sonnet 5.5 (Anthropic) were used in November 2026 for exploratory computation, in which the main results were first found, for the floating-point searches, the certificates C1 to C4 and their checks, and for checking, literature search and drafting.
+Claude Opus 5.5 and Claude Sonnet 5.5 (Anthropic) were used in November 2026, under the author's direction, for exploratory computation, derivations, code, checks, literature search and drafting.
 
 # Appendix A: what each certificate checks {-}
 
