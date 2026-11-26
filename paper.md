@@ -1,7 +1,7 @@
 ---
 title: "The longest sign run of Keiper-Li second differences: a torus problem and its dual"
 author: "Michaël Perreault"
-date: "2026-11-24"
+date: "2026-11-26"
 format: "article"
 toc: false
 header_footer_policy: "all"
@@ -17,15 +17,15 @@ header-includes:
   - \newcommand{\Lrh}{L_{\mathrm{RH}}}
 ---
 
-**Abstract.** Let $c_n=\lambda_{n+1}-2\lambda_n+\lambda_{n-1}$ be the second differences of the Li coefficients. Under the Riemann hypothesis (RH), every run of one sign of $c_n$ has length at most $593$, improving the bound $621$ of a previous paper by the author (certified, conditional on RH). The companion torus problem, in which the phases $n\theta_k$ of the cosines in the zero formula for $c_n$ are replaced by free phases, has value between $589$ and $593$: the upper bound is conditional on RH and uses a certified list of $2000$ zeros, and the lower bound is conditional on RH and on a trusted zero count for the first $1400$ zeros (certified, conditional). Under RH and the independence of $\pi$ and the zero angles over $\mathbb{Q}$ (hypothesis $\mathrm{LI}_\theta$), the torus value equals the longest run of $c_n$ (proved), so the bracket is two-sided for $c_n$ only then. A duality theorem identifies the best weights that depend on the phase of the first zero with a relaxation of the torus problem, and shows that a finite certificate exists exactly above the torus value (proved). Under RH, the trusted zero count and $\mathrm{LI}_\theta$ for the zeros up to height $2\cdot10^5$, runs of $589$ values of each sign occur with positive lower density, using an explicit zero-counting bound of Bellotti and Wong (conditional). The method of the previous paper, which gave runs of $476$ under independence of the first $1400$ angles, cannot give a window of $534$ or more, for any number of listed zeros up to $2000$ (certified).
+**Abstract.** Let $c_n=\lambda_{n+1}-2\lambda_n+\lambda_{n-1}$ be the second differences of the Li coefficients. Under the Riemann hypothesis (RH), every run of one sign of $c_n$ has length at most $593$, improving the bound $621$ of a previous paper by the author (certified, conditional on RH). The companion torus problem, in which the phases $n\theta_k$ of the cosines in the zero formula for $c_n$ are replaced by free phases, has value between $589$ and $593$: the upper bound is conditional on RH and uses a certified list of $2000$ zeros, and the lower bound is conditional on RH and on a trusted zero count for the first $1400$ zeros (certified, conditional). Under RH and the independence of $\pi$ and the zero angles over $\mathbb{Q}$ (hypothesis $\mathrm{LI}_\theta$), the torus value equals the longest run of $c_n$ (proved), so the bracket is two-sided for $c_n$ only then. A duality theorem identifies the best weights that depend on the phase of the first zero with a relaxation of the torus problem, and shows that a finite certificate exists exactly above the torus value (proved). Under RH, the trusted zero count and $\mathrm{LI}_\theta$ for the zeros up to height $2\cdot10^5$, runs of $589$ values of each sign occur with positive lower density, using an explicit zero-counting bound of Bellotti and Wong (conditional). The method of the previous paper, which gave runs of $476$ under independence of the first $1400$ angles, cannot give a window of $534$ or more, for any number of listed zeros up to $2000$ (certified). Version 1.2 adds a Lean 4 certificate: the $534$ exclusion (T7) is checked by the Lean kernel at $K=2000$, and the $593$ bound (T4) is checked by the kernel together with $40$ `native_decide` axioms, under the hypotheses that each zero lies in its certified interval and that the displayed tail bound holds (section Formal verification).
 
 ```{=latex}
 \begingroup\small
-This work is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0), https://creativecommons.org/licenses/by/4.0/. The accompanying code is MIT-licensed.
+Version 1.2.0, 2026-11-26. This work is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0), https://creativecommons.org/licenses/by/4.0/. The accompanying code is MIT-licensed.
 \par\endgroup
 ```
 
-# Introduction
+# Introduction {#p3.intro}
 
 Let $\xi(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$ and let $\lambda_n$ be the Li coefficients, defined by $\log\bigl(2\xi\bigl(\tfrac{1}{1-z}\bigr)\bigr)=\sum_{n\ge1}\lambda_n z^n/n$, with $\lambda_0=0$. Put
 $$
@@ -71,7 +71,7 @@ Here T4 improves Theorem A of [2] from $622$ to $594$ with the same hypothesis. 
 
 **Outline.** Section 2 defines the torus problem and proves T1. Section 3 proves the duality T2. Section 4 states the alignment lemma and proves T3 from certificate C1. Section 5 proves T4 and T5, Section 6 proves T6 and T7, Section 7 gives the numerical evidence and Section 8 open questions. Appendix A states each certificate inequality and Appendix B the reproduction.
 
-# The torus problem
+# The torus problem {#p3.torus}
 
 **The zero formula and the zero list.** We use two facts from [2] and restate them. *Zero formula* [2]: assume RH; then for $n\ge1$
 $$
@@ -145,7 +145,7 @@ using $F^K_x\ge m-T_K$ and the tail bound $T_K$ of the zero formula. So $c_{n},\
 
 **Phase-uniform arguments.** A *phase-uniform argument* for the bound $L$ is a proof that $\ell_\ge(x)<L$ for every $x\in\mathbb{T}^\infty$, for the true amplitudes $a_k$ and angles $\theta_k$. Theorem A of [2] and Theorem T4 below are of this form. By definition such an argument can never prove a bound below $\Lclo+1$; Section 3 shows it can reach that value in principle. Under RH alone we know nothing about which points of $\mathbb{T}^\infty$ the phases $(n\theta_k)_k$ approach, which is why the torus problem, and not $c_n$, is the object of the lower bound.
 
-# Duality
+# Duality {#p3.duality}
 
 **Weights and certificates.** Fix $K$, a number $W\ge T_K$ (a *tail allowance*) and $L$. A *weight vector* is $\beta=(\beta_0,\dots,\beta_{L-1})$ with $\beta_j\ge0$ and $\sum_j\beta_j=1$; put $B_\beta(\theta)=\sum_j\beta_je^{ij\theta}$ and, for $x_1\in\mathbb{T}$,
 $$
@@ -207,7 +207,7 @@ label: PROVED
 
 **Remark (why per-shift weights do not help).** If the comb of [2] were placed at real times, shifting the window would multiply each $B_\beta(\theta_k)$, $k\ge2$, by a unit complex number, so $G$ would not depend on the shift and weights chosen per shift would equal one uniform vector (proved for real shifts). On the integers the rounding of the window position changes $G$ only at first order in $\theta_1/2$; we expect a gain of a fraction of a percent at most (heuristic). Any larger gain must come from the shape of the weights over the whole window, which is what certificate C2 of Section 5 uses.
 
-# The lower side
+# The lower side {#p3.lower}
 
 **The alignment lemma.** The tail of $F_x$ cannot be made large by independent choices at every $j$, but the zeros above $\gamma_K$ have long periods compared with the window, so one common phase choice almost achieves the favourable value.
 
@@ -276,7 +276,7 @@ where $T^{-}_{1400}$ is a certified lower end of $T_{1400}$ (the ball arithmetic
 
 **Why the torus statement, and not $c_n$.** T3 does not say that $c_n$ has a run of $589$ under RH. It says that no proof that treats the phases $n\theta_k$ as unknown can prove less than $589$. For $c_n$ the lower bound needs more: under RH and $\mathrm{LI}_\theta$ equality holds by T1(c), so $589\le\Lrh$. With only the independence of the first $K$ angles the tail is adversarial (robust): for the C1 phases the robust tail gives far less (Section 6), and the $476$ of [2] at $K=1400$ is a different, certified robust window; T7 bounds every robust window at $K\le2000$ by $533$. This is why T6 in Section 6 needs independence up to a height of $2\cdot10^5$.
 
-# The upper side
+# The upper side {#p3.upper}
 
 **The idea.** Section 3 explains why conditioned weights can at best prove the bound $D(K,W)$. Certificate C2 is a conditioned certificate of type $(2000,W,594)$ in the sense of Section 3, with a twist forced by the zero list: we know only that each interval $I_k$ contains a zero (part (a) of the zero list), not that it is the $k$-th zero, and the extra amplitude of a zero of higher multiplicity, as well as all unlisted zeros, goes into the allowance $W$. The weights are not a comb on a few indices: each of $48$ weight vectors is spread over the whole window of $594$ indices, and each is used on one arc of phases of the first listed zero.
 
@@ -395,7 +395,7 @@ certificate: papers/keiper-li-run-torus/code/cert_c1_torus589.json, papers/keipe
 
 **An independent check (C5).** A second implementation recomputes the C1 and C2 quantities in floating point, without Arb, from the stored inputs. It is a plausibility check, not a proof; its comparison with the certified values is in Appendix B. The second check of T4 is exact: C6 is an independent implementation of the C2 inequality in exact rational arithmetic that shares no code with C2. It uses the same zero list and weight vectors as inputs and does not repeat the part (a) check.
 
-# Runs under independence
+# Runs under independence {#p3.runs}
 
 **The statement for the sequence.** T3 and T5 are statements about $F_x$. For $c_n$, Section 4 says that the lower bound $589$ needs the phases $n\theta_k$ to come near a point, for the first $1400$ zeros and also for the whole tail, because the tail does not behave as favourably as the aligned condition when only finitely many angles are controlled. The device of this section is to control the angles up to a height $\Gamma$, and to treat the zeros above $\Gamma$ as an adversarial tail of the size $T(\Gamma)=\sum_{\gamma>\Gamma}a_k$, which is small enough to be absorbed by the margin of C1.
 
@@ -496,7 +496,7 @@ Both are below $1$, so $L_c(2000)<534$ (and $L_c(1400)<534$, which also follows 
 
 **Broken inputs.** C3 and C4 are tested on inputs that must fail, and each fails or is refused as stated; the list is in Appendix B.
 
-# Numerical evidence
+# Numerical evidence {#p3.numerics}
 
 Everything in this section is floating point or heuristic unless a certificate label stands next to the number. None of it is used in a proof.
 
@@ -590,7 +590,7 @@ Here in Figure {number} we see a blue curve for j from 0 to 588 that stays above
 Here in Figure {number} we see run length against the number of zeros K, from 1000 to 2300. At K equal to 1400 two blue dots sit at 476 and 589. At K equal to 2000 a red triangle sits at 593. Grey squares at 533 sit at both K; open circles sit at 477 for K equal to 1400 and 489 for K equal to 2000.
 -->
 
-# Remarks
+# Remarks {#p3.remarks}
 
 **What is open.** The width of the bracket $589\le\Lstr\le\Lclo\le593$ (T5) is open: five values. We never call the bracket closed. For $c_n$ itself, the lower bound $589\le\Lrh$ needs $\mathrm{LI}_\theta$ (T1, T5), and the sharper reading $\Lrh=\Lstr$ needs it too.
 
@@ -600,15 +600,11 @@ Here in Figure {number} we see run length against the number of zeros K, from 10
 
 **Alpöge.** The remark in Section 1 on the announced proof of RH applies unchanged: it would remove RH from T1 to T5 but not $\mathrm{LI}_\theta$.
 
-# Code and data {-}
+# Code and data {#p3.code .unnumbered}
 
 The certificate scripts, their inputs, the zero list and the certificate records of C1 to C4 and the second check C6 are archived at <https://github.com/mik-tf/keiper-li-run-torus> and on Zenodo, <https://doi.org/10.5281/zenodo.24517615> (concept DOI, all versions). Appendix B explains how to reproduce each certificate.
 
-# Use of AI {-}
-
-Claude Opus 5.5 and Claude Sonnet 5.5 (Anthropic) were used in November 2026, under the author's direction, for exploratory computation, derivations, code, checks, literature search and drafting.
-
-# Appendix A: what each certificate checks {-}
+# Appendix A: what each certificate checks {#p3.appa .unnumbered}
 
 The proofs of T1, T2 and the alignment lemma are in the main text. This appendix states, in one place, the inequality that each certificate checks in ball arithmetic. A certificate proves its inequality for the archived exact inputs; the theorem that uses it carries the hypotheses listed in the table of Section 1.
 
@@ -628,7 +624,7 @@ The bound $T(\Gamma)\le1.810\cdot10^{-5}$ is obtained by partial summation from 
 
 **C5 (cross-check, not a proof).** An independent floating-point implementation, with no Arb and no import of the certificate scripts, recomputes the values of C1 to C4 from the stored midpoints, integer phases and weights.
 
-# Appendix B: reproduction {-}
+# Appendix B: reproduction {#p3.appb .unnumbered}
 
 Python $3.12$ with python-flint $0.9.0$ [16] (Arb, $128$-bit balls), and numpy [18] and mpmath [17] for C5. The scripts, inputs and certificate records are archived at <https://github.com/mik-tf/keiper-li-run-torus> and on Zenodo, <https://doi.org/10.5281/zenodo.24517615>. Scripts and archives are in `code/`; the commands below are run in that directory. Inputs are exact integers: phases over $2^{40}$, $T_{\mathrm{used}}$ over $2^{60}$, the weights of C2 over $2^{50}$. Each certificate file stores its run record (UTC time, script and input hashes, result). The zero list `z2000.json` is the file of [2]. Timings are wall-clock seconds as measured.
 
@@ -670,7 +666,25 @@ Three inputs that we tried do **not** fail and are not valid broken inputs. On t
 
 **The second implementation C5.** It agrees with every certified value within a first-order radius of the zero-interval balls, widened by $1.5$ because the radius of Arb's complex absolute value of a rectangular ball is at most $\sqrt2$ times the first-order radius (the difference of C2 at the vector of largest $\rho$ is $2.3\cdot10^{-6}$ inside the radius $3.5\cdot10^{-6}$; over all $48$ vectors the largest difference is $2.57\cdot10^{-6}$ and the largest radius $3.63\cdot10^{-6}$, on different vectors), and every certified value is on the safe side. C1 minimum margin $5.47216\cdot10^{-5}$ at $589$ (float $5.47298\cdot10^{-5}$, difference $8.1\cdot10^{-9}$); C2 maximum $\rho=0.995074$ (float $0.995071$), all $48$ arcs within radius, and the float arcs cover the circle even shrunk by that radius; C3 closed form $0.940928$ and $0.991767$, cover $\sup R_3$ $0.906239$ and $0.957056$ above the float values $0.906207$ and $0.957023$ in all $1024$ cells; C4 margin $1.85403\cdot10^{-5}$ at $\Gamma=2\cdot10^5$ (float $1.85484\cdot10^{-5}$), and the float margin at $\Gamma=5\cdot10^4$ is negative, as the certified failure at $\Gamma=10^5$ implies. C5 is a check of the implementation, not an independent proof: it shares the inputs.
 
-# References {-}
+# Formal verification {#p3.lean .unnumbered}
+
+We checked two of the paper's finite computations in Lean 4 (v4.36.0) with Mathlib. The code, the generated certificates and the build commands are in the `lean/` directory of the repository.
+
+**T7 (no window of 534, at K = 2000).** For every choice of ordinates gamma_k inside the 2000 certified zero intervals and every phase vector x, it is false that the weighted cosine sum exceeds the tail constant W for all j < 534. The proof is complete in Lean and uses only the standard axioms (`propext`, `Classical.choice`, `Quot.sound`). All numerical checks run in the kernel (`decide +kernel`); a lower bound on Euler's constant, needed for W, is proved from Mathlib rather than assumed. The data (zero intervals, weights, chain vectors) are generated files, reproduced by a script, so any change shows in `git diff`. T7 is formalized at K = 2000 only; the extension to K < 2000 is the paper's monotonicity argument (T1(a)), not formalized, and the K = 1400 check is not formalized. The Lean boxes are grid-rounded supersets of the paper's intervals `[mu_k +- 2^-20]` (half-width 1025/2^30 around the grid point); the containment is checked by an `assert` in `lean/gen534.py` (`mid_N`), not in Lean, and was re-checked independently for all 2000 entries. Cost: about 22 CPU minutes.
+
+**T4 (no run of 594 of one sign).** Statement: let F be any window of 594 consecutive values obeying the paper's displayed tail bound, `|F j - sum_k 2 w_k cos(j theta_k + x_k)| <= W` with W the 2000-zero tail constant. Then F takes both a strictly negative and a strictly positive value among F 0, ..., F 593. The proof combines a cover of the circle by 22 arcs (each handled by one chain vector), a Lipschitz transfer from the grid ordinate to the true ordinate, a certified Horner evaluation of the polynomial at the first zero, row checks for the remaining 1999 zeros, and the bound W <= 8847/10^7. In Lean, `thetaOf g = arg(1 - 1/(1/2 + i g))`, which equals the paper's `2 arctan(1/(2 gamma_k))` for g > 0 (forced by the boxes); this is stated, not proved as a lemma.
+
+*What is assumed.* Two hypotheses are inputs of the Lean theorem and are not proved there: (i) each gamma_k lies in its certified interval (the zero list, part (a) of the paper); (ii) the displayed tail bound hF, which is where the explicit formula and the Riemann hypothesis enter. The Lean theorem is therefore a verification of the paper's arithmetic under those hypotheses; it does not remove the RH assumption. The hypotheses are not vacuous: hF holds for the finite sum whenever W >= 0, and `Wtail_ge` (`N534Tail.lean`) proves a positive lower bound on W for every choice in the boxes.
+
+*What is trusted.* The T4 proof depends on the three standard axioms plus 40 axioms produced by `native_decide` (two in each of the 20 chunk files covering zeros 2 to 2000 in the paper's numbering, 0-based indices 1 to 1999; zero 1 is handled by the Horner link). These make the Lean compiler and its native evaluator part of the trusted base for the 1999 row checks. The same checks are reproduced independently by the python generator. Replacing them by kernel evaluation was not attempted (the T7 kernel evaluation, about 22 CPU minutes, is the nearest comparison). The axiom is `Lean.ofReduceBool`, printed by Lean v4.36 as `P3Lean.T4Cnn.{good,tot_eq}._native.native_decide.ax_1_1`. Apart from these and the generated data files, nothing else is trusted beyond the kernel and Mathlib (the kernel itself uses GMP for `Nat` literals).
+
+*Reproduction.* `lake build P3Lean.T4Assembly` (T4) and `lake build P3Lean.N534Assembly` (T7), see the build section in `lean/README.md`, on a machine with the Mathlib cache; T4 needs about 22 CPU minutes for the chunks and assembly (chunks 1114 s, `T4ChunkDef` 26 s, `T4Chunks` 27 s, `T4Assembly` 130 s) plus its dependencies (for example `Weights` about 90 s), and 7 GB of memory. Elaboration of `harc_pos` and `T4` runs with `maxHeartbeats 0` and `maxRecDepth 100000` (no timeout; effort limits only, not soundness).
+
+# Use of AI {#p3.ai .unnumbered}
+
+Claude Opus 5.5 and Claude Sonnet 5.5 (Anthropic) were used in November 2026, under the author's direction, for exploratory computation, derivations, code, checks, literature search and drafting.
+
+# References {#p3.refs .unnumbered}
 
 [1] J. B. Keiper, *Power series expansions of Riemann's $\xi$ function*, Math. Comp. 58 (1992), no. 198, 765-773. https://doi.org/10.1090/S0025-5718-1992-1122072-5
 
